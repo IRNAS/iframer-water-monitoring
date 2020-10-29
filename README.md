@@ -31,7 +31,14 @@ There are two different wiring setups that need to be taken care of.
 
 ### Connection between Ponsel sensor and Add-on board
 
+
 <p align="center">
-  <img src="doc_images/wiring_a.png" alt="wiring_a">
-  <img src="doc_images/wiring_b.png" alt="wiring_a"><br><br>
+    <div class="row">
+        <div class="column">
+            <img src="doc_images/wiring_a.png" alt="wiring_a">
+        </div>
+        <div class="column">
+            <img src="doc_images/wiring_b.png" alt="wiring_a">
+        </div>
+    </div> 
 </p>
