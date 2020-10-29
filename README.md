@@ -23,3 +23,15 @@ All manufacturers documentation can be found in `ponsel_docs` folder and desktop
 [product_page]: https://en.aqualabo.fr/ctzn-digital-sensor-bare-wires-3-m-cable-stainless-steel-pipe-b4002.html
 [lora_board]: https://www.st.com/en/evaluation-tools/b-l072z-lrwan1.html
 [arduino_library]: https://github.com/4-20ma/ModbusMaster 
+
+
+## Wiring
+
+There are two different wiring setups that need to be taken care of.
+
+### Connection between Ponsel sensor and Add-on board
+
+<p align="center">
+  <img src="doc_images/wiring_a.png" alt="wiring_a"><br><br>
+  <img src="doc_images/wiring_b.png" alt="wiring_a"><br><br>
+</p>
