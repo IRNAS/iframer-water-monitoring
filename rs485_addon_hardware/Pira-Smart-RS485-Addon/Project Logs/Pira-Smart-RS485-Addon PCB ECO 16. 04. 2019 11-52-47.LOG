@@ -1,0 +1,22 @@
+Change component parameters: Designator = "T1"; Footprint = "SOT23-3AL"; UniqueID = "\SWFLYJMU\PDOMGNRC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Author"; Value = "Ciril Golob"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLINK1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter ignored because duplicated): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLINK1URL"; Value = "c:\altium\Altium_Library\Libraries\Active\Datasheet\BSS123.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter ignored because duplicated): Name = "ComponentLink1URL"; Value = "C:\ELRADSVN\Altium_Library\Libraries\Active\Datasheet\BSS138BKW.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLINK2Description"; Value = "Datasheet www"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLINK2URL"; Value = "http://www.onsemi.com/pub/Collateral/BSS123-D.PDF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Date"; Value = "11.07.2018"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ELRAD Id sifra / ELRAD Id No"; Value = "597778"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "FIT"; Value = "0.44"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Komp / Device"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer No"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Opis / Description"; Value = "MOSFET BSS123       /N-Channel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Opomba / Remark"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Toleranca / Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "BSS123"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Velikost / Size"; Value = "SOT23"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=CON1-2
+Added Pin To Net: NetName=NetC1_2 Pin=CON1-4
+Change Net Name : Old Net Name=NetC1_2 New Net Name=+5V

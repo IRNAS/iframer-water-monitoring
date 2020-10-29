@@ -1,0 +1,15 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 08:26:20 On 29. 05. 2019
+
+Output: Bill of Materials Pick And Place
+Type  : BOM
+From  : Variant [BASIC] of Project [Pira_Smart_RS485_Addon.PrjPCB]
+   Generated File[Pira_Smart_R485_Add-On_V1_Bill of Materials Pick And Place.xlsx]
+   Generated File[Pira_Smart_R485_Add-On_V1_Bill of Materials Pick And Place.xlsx]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 08:26:26 On 29. 05. 2019
