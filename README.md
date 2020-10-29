@@ -16,7 +16,7 @@ All manufacturers documentation can be found in `ponsel_docs` folder and desktop
 * Arduino library for [Modbus protocol][arduino_library]
 
 <p align="center">
-  <img src="doc_images/prerequisites.jpg" alt="setup"><br><br>
+  <img src="doc_images/prerequisites.jpg" alt="setup" width="500"><br><br>
   <i>Required setup</i><br>
 </p>
 
@@ -35,7 +35,7 @@ As seen on image below Ponsel sensor has 6 wires, wires numbers 2 (blue) and 6 (
 Ponsel sensor has to be connected to one of two ports P1 or P2. Markings for Addon board can be seen on schematic below, there are also silkscreen markings on the bottom side of the board.
 
 <p align="center">
-<img src="doc_images/wiring_a.png" width="250"/><img src="doc_images/wiring_b.png" width="500"/>
+<img src="doc_images/wiring_a.png" width="250"/><img src="doc_images/wiring_b.png" width="500"/><br><br>
   <i>Wiring scheme of Ponsel sensor and Add-on board</i><br>
 </p>
 
@@ -61,4 +61,21 @@ We therefore connect TX line from microcontroller to the TXD of Raspberry Pi hea
   <img src="doc_images/wiring_2.png" alt="setup"><br><br>
   <i> Connections on Add-on board</i><br>
 </p>
+
+
+## Hardware changes on the Add-on board
+
+There were some changes needed on the board to make communication possible.
+This changes are not visible in schematic and are described here.
+
+Changes:
+* R7 0ohm resistor should be placed
+* R10 0ohm resistor should not be placed
+
+
+## Finding address of the Ponsel sensor
+
+To find address of Ponsel sensor is best to use Calsens software, installer for it can be found in `ponsel_software` folder.
+
+
 
