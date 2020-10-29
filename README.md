@@ -29,7 +29,36 @@ All manufacturers documentation can be found in `ponsel_docs` folder and desktop
 
 There are two different wiring setups that need to be taken care of.
 
-### Connection between Ponsel sensor and Add-on board
+### Connections between Ponsel sensor and Add-on board
+
+As seen on image below Ponsel sensor has 6 wires, wires numbers 2 (blue) and 6 (green/yellow) are not needed.
+Ponsel sensor has to be connected to one of two ports P1 or P2. Markings for Addon board can be seen on schematic below, there are also silkscreen markings on the bottom side of the board.
+
+<p align="center">
+<img src="doc_images/wiring_a.png" width="250"/><img src="doc_images/wiring_b.png" width="500"/>
+  <i>Wiring scheme of Ponsel sensor and Add-on board</i><br>
+</p>
 
 
-<img src="doc_images/wiring_a.png" width="250"/><img src="doc_images/wiring_b.png" width="250"/>
+### Connections between Add-on board and microcontroller
+
+Connections are marked on image below, we need to provide following lines:
+* 3.3V
+* 5V
+* GND
+* TXD
+* RXD
+* GPIO18 (UART_SEL_B)
+* GPIO23 (UART_SEL_A)
+* GPIO24 (UART_INH)
+* GPIO25 (DRIVER_EN)
+
+**Important**: We actually do not need to switch UART lines when connection Add-on board to the microcontroller.
+There is a mistake in naming in schematic and lines are already switched.
+We therefore connect TX line from microcontroller to the TXD of Raspberry Pi header, same goes for RX and RXD.
+
+<p align="center">
+  <img src="doc_images/wiring_2.png" alt="setup"><br><br>
+  <i> Connections on Add-on board</i><br>
+</p>
+
