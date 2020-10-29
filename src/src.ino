@@ -1,35 +1,11 @@
 #include <ModbusMaster.h>
 #include <STM32L0.h>
-
-
-#define BOOST_EN PB9
-#define UART_INH   PB6
-#define UART_SEL_A PB12
-#define UART_SEL_B PB5
-
-// On Pira_Smart_R485_Add-On board the driver control is switched, thats why we
-// also switch logic here.
-#define DRIVER_EN PB15
-#define ENABLE_DRIVER LOW
-#define DISABLE_DRIVER HIGH
-
-#define WATER_METER_ADDR    (50)
-#define RUN_MEASURE_ADDR    (0x0001)   //Run given measurement
-#define DELAY_ADDR          (0x00A4)   //Approx Time needed to obtain all measurements
-#define READ_MEASURE_ADDR   (0x0052)   //Run given measurement
-
+#include "ponsel_sensor.h"
 
 ModbusMaster sensor;
 
+
 uint8_t result;
-
-void preTransmission() {
-  digitalWrite(DRIVER_EN, ENABLE_DRIVER);
-}
-
-void postTransmission() {
-  digitalWrite(DRIVER_EN, DISABLE_DRIVER);
-}
 
 uint16_t get_int_value(ModbusMaster sensor, uint8_t index)
 {
@@ -55,22 +31,7 @@ float get_float_value(ModbusMaster sensor, uint8_t index)
 
 void setup()
 {
-    //Prepare GPIO
-    pinMode(DRIVER_EN, OUTPUT);
-    pinMode(BOOST_EN, OUTPUT);
-    pinMode(UART_INH, OUTPUT);
-    pinMode(UART_SEL_A, OUTPUT);
-    pinMode(UART_SEL_B, OUTPUT);
-
-    // Turn on 5V BOOST converter
-    digitalWrite(BOOST_EN, HIGH);
-
-    // Drive INH low to enable MUX outputs, SEL A and B have to be low so
-    // we are talking to uart 1, which leads to RS485 driver chip.
-    digitalWrite(UART_INH,   LOW);
-    digitalWrite(UART_SEL_A, LOW);
-    digitalWrite(UART_SEL_B, LOW);
-
+    rs485_board_init();
 
     // Prepare serial for debug
     Serial.begin(115200);
@@ -78,10 +39,8 @@ void setup()
     // Prepare serial for RS485 comunication
     Serial1.begin(9600);
 
-    // Initialize water meter communication
-    sensor.begin(WATER_METER_ADDR, Serial1);
-    sensor.preTransmission(preTransmission);
-    sensor.postTransmission(postTransmission);
+    ponsel_sensor_init(sensor, Serial1, 50);
+
 
     // Continiously pool for delay value, this can fail once, but it succeds 
     // afterwards
