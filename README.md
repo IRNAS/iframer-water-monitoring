@@ -16,7 +16,7 @@ All manufacturers documentation can be found in `ponsel_docs` folder and desktop
 * Arduino library for [Modbus protocol][arduino_library]
 
 <p align="center">
-  <img src="doc_images/prerequisites.png" alt="setup"><br><br>
+  <img src="doc_images/prerequisites.jpg" alt="setup"><br><br>
   <i>Required setup</i><br>
 </p>
 
