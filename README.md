@@ -15,6 +15,7 @@ Desktop application for measuring can be found in `ponsel_software` folder.
 * Pira Smart RS485 Add-On board, documentation about it can be found in `rs485_addon_hardware` folder
 * CTZN sensor or OPTOD sensor
 * Arduino library for [Modbus protocol][arduino_library]
+* Ponsel 4200 Digital Module box, needed only for finding ModBus address and calibration.
 
 <p align="center">
   <img src="doc_images/prerequisites.jpg" alt="setup" width="500"><br><br>
@@ -34,13 +35,16 @@ This library currently supports two sensors:
 * OPTOD optical oxygen sensor, address 10
 
 
-## Finding address of the Ponsel sensor
+## Finding ModBus address of the Ponsel sensor
 
 The best way to find address of Ponsel sensor is to use Calsens software, installer for it can be found in `ponsel_software` folder.
+When using Calsens software the Ponsel 4200 Digital Module box is required.
 
 ## Calibrating the Ponsel sensor
 
 To calibrate the Ponsel sensor we have to use Calsens software, installer for it can be found in `ponsel_software` folder.
+Calibration procedure is described in user manuals of each specific sensors, as well as in `Modbus_Specifications_v021-EN.pdf` document.
+When using Calsens software the Ponsel 4200 Digital Module box is required.
 
 
 ## Wiring
