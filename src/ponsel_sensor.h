@@ -17,17 +17,6 @@ enum sensor_type {
     CTZN
 };
 
-    /* We can read from CTZN sensor four different measurements:
-     * Parameter 0, Temperature,        unit - degrees
-     * Parameter 1, Conducivity CTZ,    unit - mS/cm
-     * Parameter 2, Salinity,           unit - g/Kg 
-     * Parameter 3, Conductivity 
-     *              without temp. 
-     *              compensation        uint - ms/cm
-     * Parameter 4, Is 
-     */
-
-
 struct measurements {
     uint16_t param0;
     float    param1;
@@ -36,12 +25,23 @@ struct measurements {
     float    param4;
 };
 
-
+struct pinout {
+    int32_t boost_en;
+    int32_t uart_inh;
+    int32_t uart_sel_a;
+    int32_t uart_sel_b;
+    int32_t driver_en;
+    int32_t enable_driver;
+    int32_t disable_driver;
+};
 
 class ponsel_sensor
 {
     public:
-        ponsel_sensor(Stream &serial, uint8_t address, enum sensor_type type);
+        ponsel_sensor(Stream &serial, 
+                      uint8_t address, 
+                      enum sensor_type type, 
+                      struct pinout pins);
         bool begin();
         void print_measurements();
         bool read_measurements();

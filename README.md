@@ -91,7 +91,8 @@ There were some changes needed on the board to make communication possible.
 This changes are not visible in schematic and are described here.
 
 Changes:
-* R7 0ohm resistor should be placed
-* R10 0ohm resistor should not be placed
+* R7 0 ohm resistor should be placed
+* R10 0 ohm resistor should not be placed
+* R11 10 Kohm resistor should be replaced with 0 ohm resistor
 
 

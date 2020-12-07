@@ -2,44 +2,47 @@
 
 
 static bool init_done = false;
+static pinout _pins;
 
 static void pre_tran()
 {
-  digitalWrite(DRIVER_EN, ENABLE_DRIVER);
+  digitalWrite(_pins.driver_en, _pins.enable_driver);
 }
 
 static void post_tran() 
 {
-  digitalWrite(DRIVER_EN, DISABLE_DRIVER);
+  digitalWrite(_pins.driver_en, _pins.disable_driver);
 }
 
 void ponsel_sensor::rs485_board_init()
 {
     //Prepare GPIO
-    pinMode(DRIVER_EN, OUTPUT);
-    pinMode(BOOST_EN, OUTPUT);
-    pinMode(UART_INH, OUTPUT);
-    pinMode(UART_SEL_A, OUTPUT);
-    pinMode(UART_SEL_B, OUTPUT);
+    pinMode(_pins.driver_en, OUTPUT);
+    pinMode(_pins.boost_en, OUTPUT);
+    pinMode(_pins.uart_inh, OUTPUT);
+    pinMode(_pins.uart_sel_a, OUTPUT);
+    pinMode(_pins.uart_sel_b, OUTPUT);
 
     // Turn on 5V BOOST converter
-    digitalWrite(BOOST_EN, HIGH);
+    digitalWrite(_pins.boost_en, HIGH);
 
     // Drive INH low to enable MUX outputs, SEL A and B have to be low so
     // we are talking to uart 1, which leads to RS485 driver chip.
-    digitalWrite(UART_INH,   LOW);
-    digitalWrite(UART_SEL_A, LOW);
-    digitalWrite(UART_SEL_B, LOW);
+    digitalWrite(_pins.uart_inh,   LOW);
+    digitalWrite(_pins.uart_sel_a, LOW);
+    digitalWrite(_pins.uart_sel_b, LOW);
 }
 
 ponsel_sensor::ponsel_sensor(Stream &serial, 
                              uint8_t address, 
-                             enum sensor_type type)
+                             enum sensor_type type,
+                             struct pinout pins)
 {
     _serial = &serial;
     _address = address;
     _type = type;
     _measurements = {};
+    _pins = pins;
 }
 
 bool ponsel_sensor::begin()
