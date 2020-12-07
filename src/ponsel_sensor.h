@@ -52,7 +52,6 @@ class ponsel_sensor
         Stream * _serial;
         uint8_t _address;
         enum sensor_type _type;
-
         uint16_t _delay;
         struct measurements _measurements;
 

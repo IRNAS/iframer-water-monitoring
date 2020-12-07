@@ -63,7 +63,7 @@ bool ponsel_sensor::begin()
     // Continiously pool for delay value, 
     // this can fail once, but it succeds afterwards
 
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < 3; i++)
     {
         // Read one register from DELAY_ADDR
         result = _sensor.readHoldingRegisters(DELAY_ADDR, 1);
@@ -72,7 +72,7 @@ bool ponsel_sensor::begin()
             _delay = _sensor.getResponseBuffer(0x00);
             return true;
         }
-        delay(1000);
+        delay(500);
     }
     return false;
 }
