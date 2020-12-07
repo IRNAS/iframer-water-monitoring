@@ -4,7 +4,6 @@
 #include <ModbusMaster.h>
 #include <STM32L0.h>
 #include <Arduino.h>
-#include "pinout_mappings.h"
 
 #define WATER_METER_ADDR    (50)
 #define RUN_MEASURE_ADDR    (0x0001)   //Run given measurement
