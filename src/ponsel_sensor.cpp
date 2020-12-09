@@ -65,14 +65,13 @@ bool ponsel_sensor::begin()
 
     for(int i = 0; i < 3; i++)
     {
-        // Read one register from DELAY_ADDR
-        result = _sensor.readHoldingRegisters(DELAY_ADDR, 1);
+      // Read one register from DELAY_ADDR
+      result = _sensor.readHoldingRegisters(DELAY_ADDR, 1);
 
-        if (result == _sensor.ku8MBSuccess) {
-            _delay = _sensor.getResponseBuffer(0x00);
-            return true;
-        }
-        delay(500);
+      if (result == _sensor.ku8MBSuccess) {
+          _delay = _sensor.getResponseBuffer(0x00);
+          return true;
+      }
     }
     return false;
 }
