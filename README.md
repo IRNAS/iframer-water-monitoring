@@ -95,4 +95,15 @@ Changes:
 * R10 0 ohm resistor should not be placed
 * R11 10 Kohm resistor should be replaced with 0 ohm resistor
 
+Additional changes are needed to achieve low current consumption on Add-on V1 board:
+* Remove chip U4 uart mux chip
+* Connect together with a wire solder pads 1 and 3 left behind U4 chip.
+* Connect together with a wire solder pads 12 and 13 left behind U4 chip.
+* Solder on 3.3V low drop regulator and connect to its input 5V line, then connect to its output 3V line of the Add-on board.
 
+For required connections refer to the image below.
+
+<p align="center">
+<img src="doc_images/addon_modification.png" width="250"/><img src="doc_images/addon_modification.png" width="500"/><br><br>
+  <i> Low current consumption modifications on Add-on board</i><br>
+</p>
