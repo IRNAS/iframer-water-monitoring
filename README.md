@@ -7,15 +7,15 @@ This repository contains all documentation and source code required to setup eit
 Sensors product page can be found on manufacturers [website][product_page].
 The source code was written to work on [B-L072Z-LRWAN1][lora_board], while using Arduino core.
 
-All manufacturers documentation can be found in `ponsel_docs` folder.
-Desktop application for measuring can be found in `ponsel_software` folder.
+All manufacturers documentation can be found in `aqualabo_docs` folder.
+Desktop application for measuring can be found in `aqualabo_software` folder.
 
 ## Prerequisites
 * B-L072Z-LRWAN1
 * Pira Smart RS485 Add-On board, documentation about it can be found in `rs485_addon_hardware` folder
 * CTZN sensor or OPTOD sensor
 * Arduino library for [Modbus protocol][arduino_library]
-* Ponsel 4200 Digital Module box, needed only for finding ModBus address and calibration.
+* Aqualabo 4200 Digital Module box, needed only for finding ModBus address and calibration.
 
 <p align="center">
   <img src="doc_images/prerequisites.jpg" alt="setup" width="500"><br><br>
@@ -27,7 +27,7 @@ Desktop application for measuring can be found in `ponsel_software` folder.
 [arduino_library]: https://github.com/4-20ma/ModbusMaster 
 
 
-## Ponsel sensors
+## Aqualabo sensors
 
 This library currently supports two sensors:
 
@@ -35,30 +35,30 @@ This library currently supports two sensors:
 * OPTOD optical oxygen sensor, address 10
 
 
-## Finding ModBus address of the Ponsel sensor
+## Finding ModBus address of the Aqualabo sensor
 
-The best way to find address of Ponsel sensor is to use Calsens software, installer for it can be found in `ponsel_software` folder.
-When using Calsens software the Ponsel 4200 Digital Module box is required.
+The best way to find address of Aqualabo sensor is to use Calsens software, installer for it can be found in `aqualabo_software` folder.
+When using Calsens software the Aqualabo 4200 Digital Module box is required.
 
-## Calibrating the Ponsel sensor
+## Calibrating the Aqualabo sensor
 
-To calibrate the Ponsel sensor we have to use Calsens software, installer for it can be found in `ponsel_software` folder.
+To calibrate the Aqualabo sensor we have to use Calsens software, installer for it can be found in `aqualabo_software` folder.
 Calibration procedure is described in user manuals of each specific sensors, as well as in `Modbus_Specifications_v021-EN.pdf` document.
-When using Calsens software the Ponsel 4200 Digital Module box is required.
+When using Calsens software the Aqualabo 4200 Digital Module box is required.
 
 
 ## Wiring
 
 There are two different wiring setups that need to be taken care of.
 
-### Connections between Ponsel sensor and Add-on board
+### Connections between Aqualabo sensor and Add-on board
 
-As seen on image below Ponsel sensor has 6 wires, wires numbers 2 (blue) and 6 (green/yellow) are not needed.
-Ponsel sensor has to be connected to one of two ports P1 or P2. Markings for Addon board can be seen on schematic below, there are also silkscreen markings on the bottom side of the board.
+As seen on image below Aqualabo sensor has 6 wires, wires numbers 2 (blue) and 6 (green/yellow) are not needed.
+Aqualabo sensor has to be connected to one of two ports P1 or P2. Markings for Addon board can be seen on schematic below, there are also silkscreen markings on the bottom side of the board.
 
 <p align="center">
 <img src="doc_images/wiring_a.png" width="250"/><img src="doc_images/wiring_b.png" width="500"/><br><br>
-  <i>Wiring scheme of Ponsel sensor and Add-on board</i><br>
+  <i>Wiring scheme of Aqualabo sensor and Add-on board</i><br>
 </p>
 
 
